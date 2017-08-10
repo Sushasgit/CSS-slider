@@ -1,0 +1,339 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font: 400 16px "Century Gothic", sans-serif;
+}
+
+.wrapper {
+    max-width: 1200px;
+    min-width: 320px;
+    margin: 0 auto;
+}
+
+.header {
+    position: absolute;
+    left: 60px;
+    z-index: 10;
+}
+
+.container-for-slider {
+    position: relative;
+}
+
+.slider__arrow_right, .slider__arrow_left {
+    position: absolute;
+    top: 30%
+}
+
+.slider__arrow_left {
+    left: 0;
+}
+
+.slider__arrow_right {
+    right: 0;
+}
+
+.slider {
+    display: flex;
+    overflow-x: hidden;
+    animation: slider 16s infinite;;
+}
+
+.slider__item {
+    width: 100vw;
+}
+
+.logo {
+    position: relative;
+}
+
+.logo::before {
+    content: "Уличный университет";
+    width: 188px;
+    height: 60px;
+    color: #ffffff;
+    font: 400 22px "Century Gothic", sans-serif;
+    text-transform: uppercase;
+    position: absolute;
+    top: 10px;
+    left: 37px;
+    display: inline-block;
+    text-align: center;
+}
+
+.menu {
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    margin-top: 5px;
+    padding-bottom: 5px;
+}
+
+.menu__links {
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu__item {
+    color: #000000;
+    font-size: 26px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border 500ms ease-out;
+    margin-right: 20px;
+}
+.menu__item:last-child{
+    margin-right:0;
+}
+
+.menu__item:hover {
+    border-bottom: 2px solid #000000;
+}
+
+.sidebar-menu, .profile {
+    padding: 20px;
+}
+
+.container-sidebar-links {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 1px solid #ffffff;
+    padding: 16px 51px;
+}
+
+.container-content {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5px;
+    padding: 25px 0 250px;
+    background-color: #eeeeee;
+    box-shadow: inset 0px 11px 8px -10px #1f1e1e;
+}
+
+.container-profile-links {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 1px solid #ffffff;
+    padding: 16px 51px;
+}
+
+.news {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 50px;
+    margin-right: 50px;
+    max-width: 600px;
+}
+
+.news__text {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.navigation-link {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation-link__item {
+    opacity: 0.9;
+    color: #000000;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 1s;
+}
+
+.sidebar-menu__item, .profile__item {
+    color: #000000;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 43px;
+    transition: color 1s;
+}
+.sidebar-menu__item:hover,
+.profile__item:hover,
+.navigation-link__item:hover{
+    color:#e4b3d0;
+}
+.sidebar-menu__item:nth-child(2),
+.profile__item:nth-child(2) {
+    margin-top: 44px;
+}
+
+.sidebar-menu__headline,
+.profile__headline {
+    color: #ffffff;
+    text-transform: uppercase;
+    font: 400 14px "Century Gothic", sans-serif;
+    padding: 14px 32px;
+    background-color: #6b6b6b;
+    text-align: center;
+    margin: 0 auto 44px;
+    position: absolute;
+    top: 0;
+    left: 25%;
+}
+
+.news__headline {
+    margin-top: 70px;
+    font-weight: bold;
+    font-size: 29px;
+}
+
+.news__headline::after {
+    content: "";
+    display: block;
+    background-color: #cfcfcf;
+    width: 600px;
+    height: 2px;
+    margin: 40px auto;
+}
+
+.profile, .sidebar-menu {
+    position: relative;
+    background-color: #d8d8d8;
+}
+
+.news__date {
+    color: #000000;
+    font-size: 26px;
+    text-transform: uppercase;
+}
+.news__subtitle{
+    color: #000000;
+    font:400 17px Georgia,serif;
+    line-height: 28px;
+}
+
+@keyframes slider {
+    0%, 100% {
+        margin-left: 0%;
+    }
+
+    12% {
+        margin-left: 0%;
+    }
+
+    24% {
+        margin-left: -100%;
+    }
+
+    36% {
+        margin-left: -100%;
+    }
+
+    48% {
+        margin-left: -200%;
+    }
+
+    60% {
+        margin-left: -200%;
+    }
+}
+
+@media screen and (max-width:1190px){
+    .container-profile-links, .container-sidebar-links{
+        padding: 16px 31px;
+    }
+
+    }
+@media screen and (max-width:1142px){
+    .container-profile-links, .container-sidebar-links{
+        padding: 16px 28px;
+    }
+}
+@media screen and (max-width:1147px){
+    .container-profile-links, .container-sidebar-links{
+        padding: 16px 26px;
+    }
+}
+@media screen and (max-width:1123px){
+    .container-profile-links, .container-sidebar-links{
+        padding: 16px 23px;
+    }
+}
+@media screen and (max-width:1124px){
+    .news{
+        max-width: 100%;
+        order: 3;
+        margin-top: 50px;
+    }
+    .sidebar-menu,.profile{
+        width: 50%;
+    }
+    .container-content{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+.sidebar-menu__headline,.profile__headline{
+    left: 39%;
+}
+
+}
+@media screen and (max-width:986px){
+    .menu__item{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:807px){
+    .menu__item{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width:702px){
+    .menu__item{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width:629px){
+    .menu__item{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:629px){
+    .sidebar-menu__headline,.profile__headline{
+        left: 34%;
+    }
+}
+@media screen and (max-width:580px){
+    .menu__links{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    .menu__item{
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:660px){
+    .sidebar-menu__headline,.profile__headline{
+        left: 30%;
+    }
+}
+@media screen and (max-width:495px){
+    .sidebar-menu__headline,.profile__headline{
+        left: 24%;
+    }
+}
+@media screen and (max-width:471px){
+    .sidebar-menu__headline,.profile__headline{
+        left: 17%;
+    }
+}
+@media screen and (max-width:620px){
+   .navigation-link{
+       justify-content: space-around;
+   }
+}
